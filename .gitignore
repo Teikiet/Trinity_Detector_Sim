@@ -41,3 +41,20 @@ submits
 *Trinity_fullchain/root/singularity  
 *Trinity_fullchain/root/sys  
 *Trinity_fullchain/root/usr
+# Ignore output directory and all its contents
+output/
+analysis/
+.vscode/
+CHASM_NuSpacesim/debugging_and_analysis/
+input/
+*.pcm
+*.o
+# groptics compiled file
+GrOptics/grOptics
+# corsika compiled file
+corsikaIOreader/corsikaIOreader
+
+
+
+
+# Ignore specific files
