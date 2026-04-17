@@ -17,4 +17,5 @@ data/
 */Data/
 */data/
 outputs/
-submits/
+submits
+*.sif/
