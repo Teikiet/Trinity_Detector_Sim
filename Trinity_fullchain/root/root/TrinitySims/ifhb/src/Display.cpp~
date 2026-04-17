@@ -1,0 +1,59 @@
+#include "Display.h"
+
+
+using namespace IFHB;
+
+
+Display::Display(int argc, char **argv){
+
+	TROOT root("DisplayEvts","Display Results");
+	app = new TApplication("App",&argc,argv);
+}
+
+Display::~Display(){
+
+}
+
+void Display::ShowHistogram(TH1 *h){
+	TCanvas *c = new TCanvas("c", "Canvas",800,500);
+	c->cd(1);
+
+	h->Draw("");
+
+	TTimer timer("gSystem->ProcessEvents();", 50, kFALSE);
+	timer.TurnOn();
+	TString input = Getline("Type <return> to go on: ");
+	timer.TurnOff();
+}
+
+void Display::ShowHistogram(TH2 *h){
+	TCanvas *c = new TCanvas("c", "Canvas",800,500);
+	c->cd(1);
+
+	h->Draw("colz");
+
+	TTimer timer("gSystem->ProcessEvents();", 50, kFALSE);
+	timer.TurnOn();
+	TString input = Getline("Type <return> to go on: ");
+	timer.TurnOff();
+}
+
+void Display::TelescopeGeometry(TEveArrow *tLoc, TEveArrow *tPt){
+	TEveManager::Create();
+	tLoc->SetMainColor(kBlue);
+	tPt->SetMainColor(kRed);
+
+	TEveGeoShape *earth = new TEveGeoShape("Sphere");
+	earth->SetShape(new TGeoSphere(6370,6371,38,46,-10,10));
+	earth->SetMainColor(kGreen);
+	gEve->AddElement(earth);
+	gEve->AddElement(tLoc);
+	gEve->AddElement(tPt);
+	gEve->Redraw3D(kTRUE);
+
+	TTimer timer("gSystem->ProcessEvents();", 50, kFALSE);
+	timer.TurnOn();
+	TString input = Getline("Type <return> to go on: ");
+	timer.TurnOff();
+	TEveManager::Terminate();
+}

@@ -1,0 +1,11 @@
+prefix=/root/TrinitySims/CARE
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: cparamlib
+Description: VERITAS Bank File (VBF) library
+Requires: 
+Version: 0.3.4
+Libs: -L${libdir} -lVBF -lz 
+Cflags: -I${includedir}

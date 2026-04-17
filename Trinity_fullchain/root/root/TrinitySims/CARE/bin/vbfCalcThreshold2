@@ -1,0 +1,25 @@
+#!/usr/bin/perl
+#
+# vbfCalcThreshold2 -- calculates a zero-suppression threshold for each
+#                      channel based on the sum of the pedestal mean and a
+#                      fixed constant.
+#
+#
+
+sub usage {
+    print "Usage: vbfCalcThreshold2 <constant> < input > output\n";
+    print "Description:\n";
+    print "Reads a pedestal file from standard input and generates a thresholds file, where\n";
+    print "a threshold is just pedestal value + constant.\n";
+    exit 1;
+}
+
+usage unless @ARGV == 1;
+
+$constant=$ARGV[0];
+
+while (<STDIN>) {
+    @stuff=split(' ');
+    print "$stuff[0] $stuff[1] ".($stuff[2]+$constant)."\n";
+}
+

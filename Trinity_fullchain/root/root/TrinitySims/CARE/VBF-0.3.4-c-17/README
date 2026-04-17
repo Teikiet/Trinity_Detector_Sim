@@ -1,0 +1,76 @@
+VBF - VERITAS Bank Format Library
+
+Currently in the C++17 Branch
+
+Installing VBF using CMake:
+
+$ cmake -S . -B build -DCMAKE_INSTALL_PREFIX=/usr/local/veritas
+$ cmake --build build --target install
+
+Installing VBF using GNU autotools:
+
+$ ./configure --prefix=/usr/local/veritas
+$ make
+$ make install 
+
+If something went horribly wrong, you can try regenerating the "configure" script with
+
+$ ./autogen.sh
+
+Otherwise, please open an issue in either this github repo, or through elogs.
+
+If you want all of the gory details of how to do the installation, read the
+INSTALL file.
+
+If you want to learn who made VBF, read the AUTHORS file.
+
+If you want to learn what the license for VBF is, read the COPYING file.
+
+If you want to learn how to use VBF, look into the examples directory.  Read
+examples/README and then start poking around in the code.
+
+If you want to learn all of the details about what you can do with VBF, look
+at the header files in this directory.  Most of them have very nice comments.
+
+If you want to use this library to examine and manipulate VBF files, you can
+use the seven programs that come with this package and will get installed
+wherever:
+
+vbfSummary          Prints summary information about a file, such as its run
+                    number, the number of packets that it contains, and so on.
+                    Only prints info that is available in the header.  Hence
+                    this program is typically very fast.
+
+vbfList             Lists all of the packets in a file.  Prints the names of
+                    the banks contained in those packets.  Does not print the
+                    contents of any of the banks.
+
+vbfCheck            Verifies the checksum in a file.  Can either verify the
+                    checksum that is contained inside the file, or can verify
+                    that the file passes a checksum that you pass as an
+                    argument.
+
+vbfReindex          Rebuilds a file's index and checksum.
+
+vbfPed              Calculates pedestals over a sample range.  You get one
+		    pedestal value and standard deviation per channel,
+		    representing the accumulated statistics over all samples
+		    in that range for all FADC traces for that channel.  This
+		    tool will analyze data from all telescope simultaneously.
+
+vbfZeroSup	    Performs software zero-suppression based on a file that
+		    contains zero-suppress thresholds.  You can create such a
+		    file yourself, or you can use vbfPed and vbfCalcThreshold
+		    to get the file.
+
+vbfCalcThreshold    Reads in a pedestals file and spits out a thresholds file,
+		    based on a ratio supplied by the user.
+
+vbfRepTel           Creates 'fake' stereo data by replicating the data for a
+                    particular telescope.
+
+vbfZip              Compresses or decompresses event data using sample
+                    comrpession.
+
+If you have any questions or comments, please feel free to open an issue in this repo
+

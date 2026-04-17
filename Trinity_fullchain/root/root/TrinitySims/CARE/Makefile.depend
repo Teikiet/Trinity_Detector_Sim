@@ -1,0 +1,32 @@
+
+#DEPEND LIST DONT DELETE
+
+ArrayTrigger.o: ArrayTrigger.h ReadConfig.h
+CameraAndReadout.o: TriggerTelescopeBase.h TelescopeData.h ReadConfig.h
+CameraAndReadout.o: TraceGenerator.h Display.h GOrderedGrid.h
+CameraAndReadout.o: GOrderedGridSearch.h TriggerTelescopeVERITAS.h
+CameraAndReadout.o: TriggerTelescopeSPB2.h TriggerTelescopeTriDem.h
+CameraAndReadout.o: ArrayTrigger.h FADC.h VG_writeVBF.h
+Display.o: Display.h TelescopeData.h ReadConfig.h
+FADC.o: FADC.h TelescopeData.h ReadConfig.h TraceGenerator.h Display.h
+FADC.o: GOrderedGrid.h GOrderedGridSearch.h
+GOrderedGrid.o: GOrderedGrid.h
+GOrderedGridSearch.o: GOrderedGrid.h GOrderedGridSearch.h
+ReadConfig.o: ReadConfig.h
+TelescopeData.o: TelescopeData.h ReadConfig.h
+TraceGenerator.o: TraceGenerator.h TelescopeData.h ReadConfig.h Display.h
+TraceGenerator.o: GOrderedGrid.h GOrderedGridSearch.h
+TriggerTelescopeBase.o: TriggerTelescopeBase.h TelescopeData.h ReadConfig.h
+TriggerTelescopeBase.o: TraceGenerator.h Display.h GOrderedGrid.h
+TriggerTelescopeBase.o: GOrderedGridSearch.h
+TriggerTelescopeSPB2.o: TriggerTelescopeSPB2.h TriggerTelescopeBase.h
+TriggerTelescopeSPB2.o: TelescopeData.h ReadConfig.h TraceGenerator.h
+TriggerTelescopeSPB2.o: Display.h GOrderedGrid.h GOrderedGridSearch.h
+TriggerTelescopeTriDem.o: TriggerTelescopeTriDem.h TriggerTelescopeBase.h
+TriggerTelescopeTriDem.o: TelescopeData.h ReadConfig.h TraceGenerator.h
+TriggerTelescopeTriDem.o: Display.h GOrderedGrid.h GOrderedGridSearch.h
+TriggerTelescopeVERITAS.o: TriggerTelescopeVERITAS.h TriggerTelescopeBase.h
+TriggerTelescopeVERITAS.o: TelescopeData.h ReadConfig.h TraceGenerator.h
+TriggerTelescopeVERITAS.o: Display.h GOrderedGrid.h GOrderedGridSearch.h
+VATime.o: VATime.h
+VG_writeVBF.o: VATime.h VG_writeVBF.h

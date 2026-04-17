@@ -1,0 +1,56 @@
+0.3.4	Added new class (VCorsikaSimulationData). This class can be used to add
+	a new bank with additional information to VBF files generated from
+	simulated showers (height and depth of first interaction,
+	CORSIKA run number, CORSIKA shower ID).
+	Also, short test programs to write/read this information.
+
+0.2.1   Fixed bug in compression of traces where the number of samples is
+	not a multiple of 8.  Fixed vbfZeroSup problems when sample compression
+	is used.  Fixed vbfZeroSup's default pedestal event type.
+
+0.2.0   Added support for new data format.  Added support for gzip
+	decompression.  Added sample compression and a utility called vbfZip
+	that controls it.  Changed the API to better handle the two formats.
+
+0.1.5   Slight modifications to support better versioning.
+
+0.1.4   Inclusion of two new tools: vbfPed and vbfZeroSup.  No longer using
+	libtool to build libraries - instead building static libs.  This is an
+	unfortunate work-around for a Mac OS X linker bug.  One side-effect is
+	that the 'install' target will remove all libVBF*.so and libVBF*.dylib
+	from your lib/ directory.  This removal step is necessary because most
+	linkers will pick the dynamic library before going to the static one,
+	meaning that your old VBF installation would override the new one.
+
+	Also included simplification of VGPSDecoder API, making it more
+	straight-forward to use it with VEvents.
+
+	The final 0.1.4 release will include a complete clean-up of the code
+	that deals with the GPS time, GPS year, and event type.  Currently,
+	the only reliable way of getting those fields is through the array
+	trigger.
+
+0.1.3   Minor bugfix releases.
+0.1.2
+0.1.1
+
+0.1.0   Changed the names of files to better comply with VERITAS conventions.
+        Imported JQ's prototype data reader and made it compatible with VBF.
+        Hence, it is now possible to use VRawDataFileRead to read VBF files.
+        It is also possible to use VRawEventParser to read VEvents extracted
+        from VPackets.
+
+0.0.1   Contains changes to accommodate the addition of the configuration mask
+        to the VBF header (suggested by Ozlem and Rene) as well as the addition
+        of the telescope_id field in the telescope sub-structure of the
+        VArrayTrigger.  Also includes better code for managing the
+        configuration mask as a vector< bool > rather than as an integer.  To
+        make the installation quicker, this release also contains a more
+        streamlined Makefile.am that will not build datum_make unless it is
+        really required.
+        
+        (NOTE: this release contains non-backwards-compatible changes to the
+        data format.  Hopefully this'll be the last time I'll have to do that.)
+
+0.0.0   First release.  Decoupled VBF code from the rest of the Purdue VERITAS
+        package.  Added some nifty examples.

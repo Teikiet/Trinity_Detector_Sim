@@ -1,0 +1,129 @@
+'//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+////              /////             /////   //////    //////              ////
+////////    //////////   ///////////////   //////    //////    ///////   /////
+///////    //////////   ///////////////   //////    //////    ////////   /////
+//////    //////////         /////////             //////               //////
+/////    //////////   ///////////////    //////   //////      /////    ///////
+////    //////////   ///////////////    //////   //////      ///////   ///////
+/            ////   ///////////////    //////   //////                ////////
+//////////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////////////////////
+Telescope parameters
+//////////////////////////////////////////////////////////////////////////////
+
+Altitude of the balloon in meters
+
+* TELALT 2930
+
+Latitude (Polar) and longitude of telescope
+
+* TELLAT 39
+* TELLONG 113
+
+Angle from zenith where the telescope is pointing in degrees
+
+* TELPOINTING 91.56
+
+Collection area of telescope
+
+* TELCOLLECTIONAREA 1
+
+Focal length of optics in mm
+* TELFOCALLENGTH 1485
+
+Area simulated enhancement in degrees
+* ANGLEINCREASE 0
+
+* ANGLESHOWERINCREASE 0
+
+//////////////////////////////////////////////////////////////////////////////
+Camera parameters
+/////////////////////////////////////////////////////////////////////////////
+
+* CAMANGULARWIDTH 3.8
+* CAMANGULARHEIGHT 3.8
+* CAMERAWIDTH 196
+* CAMERAHEIGHT 196
+
+//////////////////////////////////////////////////////////////////////////////
+Shower parameters
+/////////////////////////////////////////////////////////////////////////////
+
+Number of showers that will be simulated
+
+* NSHOWERS 10
+
+//////////////////////////////////////////////////////////////////////////////
+Source parameters
+//////////////////////////////////////////////////////////////////////////////
+
+Boolean specifying if below the limb
+* ISBELOWLIMB 1
+
+Boolean specifying if it is a point source
+
+* ISPOINTSOURCE 0
+
+Azimuth angle in degrees
+
+* AZIMUTHANGLE 0
+
+Zenith angle for the point source in degrees
+
+* ZENITHANGLE 45
+
+Energy of incoming neutrino in Log(E[GeV])
+
+* NEUTRINOENERGY 8
+
+Energy of incoming cosmic ray in GeV
+* COSMICRAYENERGY 1e6
+
+Energy Spectrum Parameters
+* ENERGYSPECTRUM 0
+* GAMMAINDEX 2.7
+* ESAMPLESTRT 1e8
+* ESAMPLEEND 1e12
+
+* BSMMEANLIFE 1.0
+//////////////////////////////////////////////////////////////////////////////
+CHASM parameters
+/////////////////////////////////////////////////////////////////////////////
+
+Radius of collection sphere. Sphere should include the whole telescope
+collection area in meters.
+
+* COLLECTIONSPHERERADIUS 0.8
+
+
+//////////////////////////////////////////////////////////////////////////////
+External data parameters
+//////////////////////////////////////////////////////////////////////////////
+
+* FILEEMERGENCEANGLES  /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/NuTauPExit_EarthEmergence.csv
+* FILEENERGYFRACTIONS /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/ENuTauCDF_EFrac.csv
+* FILEENERGYDISTRIBUTION /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/ENuTauCDF.csv
+
+* FILESHOWERNMAX /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/NPhot_ALCPlot.csv
+* FILESHOWERXMAX /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/XMax_ALCPlot.csv
+* FILESHOWERWIDTH /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/Width_ALCPlot.csv
+
+* FILEVIEWINGANGLELUT /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/ViewingAngleLUT.txt 
+* FILEVIEWINGANGLEINVLUT /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/ViewingAngleInverseLUT.txt
+
+* FILENUENERGY /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/NuTauPExit_LogENu.csv
+* FILEEXITPROB /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/NuTauPExit.csv
+
+* FILEXSECTION /storage/hive/project/phy-otte/shared/analysistools/TrinitySims/ifhb/data/ProtonCrossSection.csv
+
+
+//////////////////////////////////////////////////////////////////////////////
+Draw options for debugging
+/////////////////////////////////////////////////////////////////////////////
+
+* DRAW 0

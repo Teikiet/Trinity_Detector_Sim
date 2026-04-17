@@ -1,0 +1,12 @@
+#!/bin/bash
+#du -ch ./*/* | grep -E "\.c"\|\.h|grep -v scripts >CopyRightFileList
+
+{
+ while read size filename
+    do
+       if [ -f $filename ]; then
+	cat COPYRIGHT.txt >>$filename
+        echo $filename
+       fi
+    done
+}<CopyRightFileList

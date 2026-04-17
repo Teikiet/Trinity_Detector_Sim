@@ -1,0 +1,28 @@
+#!/usr/bin/perl
+#
+# vbfCalcThreshold3 -- calculates a zero-suppression threshold for each
+#                      channel based on the sum of the pedestal mean and a
+#                      fixed constant.  only considers one telescope.
+#
+#
+
+sub usage {
+    print "Usage: vbfCalcThreshold3 <telescope> <constant> < input > output\n";
+    print "Description:\n";
+    print "Reads a pedestal file from standard input and generates a thresholds file, where\n";
+    print "a threshold is just pedestal value + constant.\n";
+    exit 1;
+}
+
+usage unless @ARGV == 2;
+
+$telescope=$ARGV[0];
+$constant=$ARGV[1];
+
+while (<STDIN>) {
+    @stuff=split(' ');
+    if ($telescope == $stuff[0]) {
+	print "$stuff[1] ".($stuff[2]+$constant)."\n";
+    }
+}
+

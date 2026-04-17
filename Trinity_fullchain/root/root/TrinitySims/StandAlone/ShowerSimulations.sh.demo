@@ -1,0 +1,4 @@
+python3.10 ./UpwardShowerSPB2.py
+./corsikaIOreader -queff 1.0 -cors ../CHASM_NuSpacesim/demo/SPB2StraightUp.dat -seed 20 -grisu UpwardShowerSPB2.cph -absfile noExtinction -cfg ./data/TLLOC.dat
+./grOptics -of test.root -p ./Config/opticsSimulation.pilot
+

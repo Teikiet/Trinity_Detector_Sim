@@ -1,0 +1,37 @@
+/usr/local/lib/python3.10/dist-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+/root/TrinitySims/CHASM_NuSpacesim/simple_abstable_test.py:68: RuntimeWarning: invalid value encountered in scalar divide
+  actual_ratio = coeff_300 / coeff_600
+/root/TrinitySims/CHASM_NuSpacesim/simple_abstable_test.py:91: RuntimeWarning: divide by zero encountered in scalar divide
+  scale_height = -10000 / np.log(alt_10km_coeff / sea_level_coeff) if alt_10km_coeff > 0 else np.inf
+==================================================
+CHASM ABSTABLE.NPZ ANALYSIS
+==================================================
+Data structure:
+  Wavelengths: 105 points from 180 to 700 nm
+  Heights: 51 points from 0 to 50000 m
+  Extinction coefficients shape: (105, 51)
+  Value range: 0.00e+00 to 8.48e+01 m^-1
+
+Sample extinction coefficients (m^-1):
+Wavelength (nm)    Sea Level          5km         10km         20km
+-----------------------------------------------------------------
+            300     0.00e+00     9.29e-01     1.33e+00     2.51e+00
+            400     0.00e+00     4.03e-01     5.21e-01     6.02e-01
+            500     0.00e+00     2.53e-01     3.08e-01     3.40e-01
+            600     0.00e+00     1.86e-01     2.17e-01     2.33e-01
+            700     0.00e+00     1.49e-01     1.70e-01     1.79e-01
+
+Wavelength dependence analysis:
+  Ratio of extinction at 300nm vs 600nm: nan
+  Expected ratio for pure Rayleigh (1/λ^4): 16.0
+  → Mixed extinction sources
+
+Altitude dependence analysis:
+  Extinction at sea level (400nm): 0.00e+00 m^-1
+  Extinction at 10km (400nm): 5.21e-01 m^-1
+  Implied scale height: -0 m
+  (Atmospheric scale height is ~8000m)
+Plots saved:
+- chasm_abstable_vs_wavelength.png
+- chasm_abstable_vs_altitude.png

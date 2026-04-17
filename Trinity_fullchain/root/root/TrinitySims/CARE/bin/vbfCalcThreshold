@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#
+# vbfCalcThreshold -- calculates a zero-suppression threshold for each
+#                     channel based on the pedestals and a signal-to-noise
+#                     ratio
+#
+#
+
+sub usage {
+    print "Usage: vbfCalcThreshold <signal-to-noise threshold> < input > output\n";
+    print "Description:\n";
+    print "Reads a pedestal file from standard input and generates a thresholds file, where\n";
+    print "a threshold is just pedestal value + pedestal standard deviation * signal-to-\n";
+    print "noise threshold.\n";
+    exit 1;
+}
+
+usage unless @ARGV == 1;
+
+$threshold=$ARGV[0];
+
+while (<STDIN>) {
+    @stuff=split(' ');
+    print "$stuff[0] $stuff[1] ".($stuff[2]+$stuff[3]*$threshold)."\n";
+}
+
