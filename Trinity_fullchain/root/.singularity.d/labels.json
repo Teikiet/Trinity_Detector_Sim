@@ -1,0 +1,12 @@
+{
+	"maintainer.email": "root-dev@cern.ch",
+	"maintainer.name": "ROOT team",
+	"org.label-schema.build-arch": "amd64",
+	"org.label-schema.build-date": "Thursday_4_December_2025_12:25:16_MST",
+	"org.label-schema.schema-version": "1.0",
+	"org.label-schema.usage.apptainer.version": "1.4.1",
+	"org.label-schema.usage.singularity.deffile.bootstrap": "localimage",
+	"org.label-schema.usage.singularity.deffile.from": "/uufs/chpc.utah.edu/common/home/u1520754/Detector_Sims/Trinity_fullchain.sif",
+	"org.opencontainers.image.ref.name": "ubuntu",
+	"org.opencontainers.image.version": "22.04"
+}

@@ -1,0 +1,4 @@
+#!/bin/sh
+
+    exec bash /root/TrinitySims/BatchSubmissionScripts/Hive_SequentialChainJobPerShower/runTrinityShowersMCSequentialChain_noroot.sh "$@"
+
